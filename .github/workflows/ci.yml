@@ -41,8 +41,10 @@ jobs:
           flake8 . --count --exit-zero --statistics
 
       - name: pytest
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
-          pytest calculator/tests/
+          pytest calculator/tests/ -v --tb=short
 
   trivy-scan:
     runs-on: ubuntu-latest
