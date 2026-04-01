@@ -41,9 +41,8 @@ jobs:
           flake8 . --count --exit-zero --statistics
 
       - name: pytest
-        working-directory: calculator
         run: |
-          pytest tests/
+          pytest calculator/tests/
 
   trivy-scan:
     runs-on: ubuntu-latest
