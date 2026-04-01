@@ -25,8 +25,9 @@ jobs:
         id: push
         uses: docker/build-push-action@v6
         with:
-          context: ./calculator/calculator
+          context: ./calculator
           file: ./calculator/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/calculator:latest
+
 
