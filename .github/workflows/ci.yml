@@ -35,11 +35,13 @@ jobs:
           pip install flake8 pytest
 
       - name: flake8
+        working-directory: calculator
         run: |
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 . --count --exit-zero --statistics
 
       - name: pytest
+        working-directory: calculator
         run: |
           pytest tests/
 
@@ -62,3 +64,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: results.sarif
+
