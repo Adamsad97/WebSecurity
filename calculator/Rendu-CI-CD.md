@@ -8,7 +8,7 @@
 
 ## 1) URL du repository GitHub public
 
-- URL: A_COMPLETER
+- URL: https://github.com/Adamsad97/WebSecurity/tree/main/calculator
 
 ## 2) Screenshot de la pipeline CI en succes
 
@@ -20,7 +20,7 @@
 
 ## 4) Screenshot du repository Docker Hub montrant l'image
 
-- Capture: A_AJOUTER
+- Capture: ![alt text](image-4.png)
 
 ## 5) Fichiers crees
 
