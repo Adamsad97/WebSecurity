@@ -1,25 +1,31 @@
 # Rendu - Exam CI/CD Pipeline Python
 
 ## Membres du groupe
-- Nom 1:
+
+- Nom 1: DIAWARA Adama
 - Nom 2:
 - Nom 3:
 
 ## 1) URL du repository GitHub public
+
 - URL: A_COMPLETER
 
 ## 2) Screenshot de la pipeline CI en succes
-- Capture: A_AJOUTER
+
+- Capture: ![alt text](image-3.png)
 
 ## 3) Screenshot de la pipeline CD en succes
-- Capture: A_AJOUTER
+
+- Capture: ![alt text](image-2.png)
 
 ## 4) Screenshot du repository Docker Hub montrant l'image
+
 - Capture: A_AJOUTER
 
 ## 5) Fichiers crees
 
 ### .github/workflows/ci.yml
+
 ```yaml
 name: CI
 
@@ -87,6 +93,7 @@ jobs:
 ```
 
 ### .github/workflows/cd.yml
+
 ```yaml
 name: CD
 
@@ -122,6 +129,7 @@ jobs:
 ```
 
 ## Notes
+
 - Secrets GitHub a configurer dans le repository:
   - DOCKER_USERNAME
   - DOCKER_PASSWORD
