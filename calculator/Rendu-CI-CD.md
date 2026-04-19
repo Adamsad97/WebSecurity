@@ -7,7 +7,7 @@
 
 ## 1) URL du repository GitHub public
 
-- URL: https://github.com/Adamsad97/WebSecurity/tree/main/calculator
+- URL: https://github.com/Adamsad97/WebSecurity/tree/develop/calculator
 
 ## 2) Screenshot de la pipeline CI en succes
 
