@@ -215,6 +215,7 @@ xhr2.send(formData);
 
 * un screenshot
   ![alt text](image-21.png)
+  ![alt text](image-22.png)
   ![alt text](image-20.png)
 
 - Les recommandations
