@@ -200,17 +200,32 @@ xhr2.send(formData);
 
   ######################################################################################
 
-- Callenge 7:
-- URL
+- Callenge 7: Exploitation des erreurs SQL
+- URL : https://www.root-me.org/fr/Challenges/Web-Serveur/SQL-injection-Error
+
 - Les étapes de découvertes de la vulnérabilité
+
+1. Test de formulaire login
+2. Analyse de l'URL vers Contents
+3. Identification
+4. Information sur les tables et les colonnes
+5. Extration de mot de passe avec 'SELECT' pour lever un flag
+
 - Le payload utilisé
 
 * un screenshot
   ![alt text](image-21.png)
   ![alt text](image-20.png)
 
-- Les recommandations pour sécuriser cette vulnérabilité et une référence (un lien) d’où vous avez trouvé
-  ces recommandations
+- Les recommandations
+
+1. Rejet de valeurs non conformes
+2. Masquer les erreurs sql
+3. Optter pour des requêtes préparées
+
+Références:
+
+- https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 
 ###########################################################################################
 
