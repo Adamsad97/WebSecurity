@@ -260,5 +260,3 @@ Références:
 - Référence : https://portswigger.net/web-security/server-side-template-injection#how-to-prevent-server-side-template-injection-vulnerabilities
 
 ############################################################################################
-
-#########################################################################################
