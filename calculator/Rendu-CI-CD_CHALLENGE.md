@@ -34,6 +34,7 @@
 - URL : https://portswigger.net/web-security/file-path-traversal/lab-validate-file-extension-null-byte-bypass
 
 - Payload : ../../../etc/passwd%00.png
+
   ![alt text](image-5.png)
   ![alt text](image-13.png)
 
@@ -42,6 +43,15 @@
 1. Click sur un produit
 2. Récupérateur de la réquête contenant l'image
 3. Modification du nom d'image par ../../../etc/passwd%00.png
+
+- Recommandations:
+
+1. S'assurer les informations utilisateur sont strictement validées
+2. Utiliser des fonctions qui ne gardent que le nom des fichiers
+3. S'assurer de bonne configuration du système de fichier
+4. Limiter l'accès à l'application
+
+- Référence: https://owasp.org/www-community/attacks/Path_Traversal
 
 ######################################################################
 
@@ -63,8 +73,12 @@
   ![alt text](image-14.png)
   ![alt text](image-15.png)
 
-- Les recommandations pour sécuriser cette vulnérabilité et une référence (un lien) d’où vous avez trouvé
-  ces recommandations
+- Les recommandations pour sécuriser cette vulnérabilité
+
+1. Désactivation d'inclusion dans le fichier de configuration PHP
+2. Par précaution, une liste sécurisée pour les fichiers susceptibles d'être inclus
+
+- Référence: https://www.php.net/manual/fr/wrappers.php.php
 
 #########################################################################
 
@@ -99,10 +113,13 @@ xhr2.send(formData);
   ![alt text](image-16.png)
   ![alt text](image-17.png)
 
-* Les recommandations pour sécuriser cette vulnérabilité et une référence (un lien) d’où vous avez trouvé
-  ces recommandations
+* Les recommandations :
 
-################################################################################
+1. Utilisation de méthodes (POST/PUT) afin que les informations soumises ne soient pas interceptées.
+2. Verification anti-CSRF
+
+- Référence : https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
+  ################################################################################
 
 - Challenge 4 : CSRF where token is not tied to user session
 
@@ -135,10 +152,10 @@ xhr2.send(formData);
 
     Associer le token CSRF à la session utilisateur
     Vérifier que le token est généré par session et non globalement valide
-    Utiliser des mécanismes supplémentaires comme :
-    SameSite cookies
     Double Submit Cookie pattern
     Invalider les tokens après usage
+
+- Référence: https://portswigger.net/web-security/csrf
 
 #################################################################################
 
@@ -173,10 +190,29 @@ xhr2.send(formData);
 ![alt text](image-12.png)
 ![alt text](image-11.png)
 
+- Les recommandations :
+
+1. Valider toujours avec entête
+2. Pour la principale, utiliser des jeton
+3. Utilisation des jetons anti-CSRF
+
+- Référence : https://portswigger.net/web-security/csrf/bypassing-referer-based-defenses
+
+  ######################################################################################
+
+- Callenge 7:
+- URL
+- Les étapes de découvertes de la vulnérabilité
+- Le payload utilisé
+
+* un screenshot
+  ![alt text](image-21.png)
+  ![alt text](image-20.png)
+
 - Les recommandations pour sécuriser cette vulnérabilité et une référence (un lien) d’où vous avez trouvé
   ces recommandations
 
-######################################################################################
+###########################################################################################
 
 - Callenge 10 : Server-side template injection in an unknown language with a documented exploit
 - l'URL: https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-in-an-unknown-language-with-a-documented-exploit
@@ -200,8 +236,10 @@ xhr2.send(formData);
   ![alt text](image-8.png)
   ![alt text](image-9.png)
 
-- Les recommandations pour sécuriser cette vulnérabilité
-  Ne jamais injecter des entrées utilisateur dans un template
+- Les recommandations
+
+1. Ne jamais injecter des entrées utilisateur dans un template
+2. Marquer les cookies sensibles comme HttpOnly
 
 - Référence : https://portswigger.net/web-security/server-side-template-injection#how-to-prevent-server-side-template-injection-vulnerabilities
 
